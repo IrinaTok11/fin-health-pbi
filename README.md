@@ -1,4 +1,4 @@
-# Furnikom LLC — Financial Health Dashboard (Power BI)
+# Integra LLC — Financial Health Dashboard (Power BI)
 
 A product-style, reproducible **financial health dashboard** for a mid-sized company (2021–2023).  
 The report tracks **12 core KPIs** with YoY deltas, target norms, and risk flags, plus structural and trend views (assets, liabilities, and P&L).
@@ -97,7 +97,7 @@ The badge communicates both **direction** (YoY change) and **quality vs norm** (
 ```text
 .
 ├─ assets/                 # screenshots used in README
-├─ data/                   # sample/anonymized Excel (e.g., furnikom_financial_analysis.xlsx)
+├─ data/                   # sample/anonymized Excel (e.g., integra_financial_analysis.xlsx)
 ├─ dax/                    # DAX measures (one file per measure or grouped)
 ├─ deneb/                  # Vega-Lite JSON specs (clean JSON, no comments)
 ├─ docs/
@@ -123,7 +123,7 @@ The badge communicates both **direction** (YoY change) and **quality vs norm** (
 ### Open the report
 1. `git clone https://github.com/IrinaTok11/fin-health-pbi`
 2. Open **fin-health.pbix** from the repo root.
-3. If prompted, set the Excel path to `data/furnikom_financial_analysis.xlsx`.
+3. If prompted, set the Excel path to `data/integra_financial_analysis.xlsx`.
 4. Apply the theme: **View → Themes → Browse → `themes/powerbi_theme.json`**.
 5. **Refresh** to recalculate all measures and visuals.
 
