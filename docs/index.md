@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Furnikom LLC — Financial Health Dashboard (Power BI)
+# Integra LLC — Financial Health Dashboard (Power BI)
 
 A compact, executive-ready dashboard tracking **12 financial KPIs** (liquidity, stability, turnover, profitability) with YoY deltas, norms, and risk flags. Period: **2021–2023**.
 
