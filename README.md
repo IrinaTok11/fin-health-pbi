@@ -1,0 +1,167 @@
+# Furnikom LLC — Financial Health Dashboard (Power BI)
+
+A product-style, reproducible **financial health dashboard** for a mid-sized company (2021–2023).  
+The report tracks **12 core KPIs** with YoY deltas, target norms, and risk flags, plus structural and trend views (assets, liabilities, and P&L).
+
+---
+
+## Table of contents
+- [Overview](#overview)
+- [Key features](#key-features)
+- [KPIs tracked](#kpis-tracked)
+- [Per-KPI trend badge](#per-kpi-trend-badge)
+- [Screenshots](#screenshots)
+- [Project structure](#project-structure)
+- [Getting started](#getting-started)
+- [Methodology (how it works)](#methodology-how-it-works)
+- [Data & privacy](#data--privacy)
+- [Roadmap](#roadmap)
+- [License](#license)
+- [Contact](#contact)
+
+---
+
+## Overview
+**Goal:** provide a clear, decision-ready view of the company’s financial condition across **12 ratios** with YoY deltas, norms, and flags.  
+**Audience:** executives, finance leads, and analysts.
+**Tech stack:** Power BI Desktop · DAX (arguments with commas) · Deneb (Vega-Lite JSON) · Excel.
+
+---
+
+## Key features
+- **One-screen health check** with traffic-light logic and concise commentary.
+- **Norm bands per KPI** (soft ranges with a neutral zone) used on **all 12 KPI cards**.
+- **YoY deltas** (absolute/relative), directional arrows, formatted tooltips.
+- **Per-KPI trend badge** (top-right of each card): arrow + color by current norm status.
+- **Consistent visual language**: theme, typography, color scale for “above/at/below norm”.
+- **Reproducible setup**: versioned DAX, Deneb specs, and data dictionary.
+
+---
+
+## KPIs tracked
+### 1) Liquidity
+- Cash ratio
+- Current ratio
+- Quick ratio
+- Months to repay (liquidity coverage in months)
+
+### 2) Capital structure & solvency
+- Equity ratio (Autonomy)
+- Debt to equity
+- Working capital (absolute)
+- Altman Index (Z-Score)
+
+### 3) Profitability & returns
+- Return on assets (ROA)
+- Return on equity (ROE)
+- Net profit margin
+- EBITDA margin
+
+### 4) Structure & trends
+- Structure of current assets (cash, inventories, trade receivables)
+- P&L trends (Revenue, EBIT, Net Profit)
+- Indexed trends (Assets, Equity, Revenue)
+- Structure of liabilities (current liabilities, non-current liabilities, equity)
+
+---
+
+## Per-KPI trend badge
+Every KPI card includes a small **trend badge** in the top-right corner.  
+The badge communicates both **direction** (YoY change) and **quality vs norm** (color):
+
+- **Arrow:** ▲ positive YoY change, ▼ negative, ● no change.  
+- **Color:** the badge color follows the KPI’s **current norm status**  
+  (`below / at_norm / above` → palette `Color Hex`).  
+  So you see at a glance: *is it improving and is it within norm?*
+
+**Visual type:** native Power BI **Card** (not Deneb).
+
+**Measures used (see `dax/measures.dax`):**
+- `YoY Delta` / `YoY Delta %` — latest year vs previous year (numeric or %)
+- `Trend Arrow` — ▲ / ▼ / ● based on the sign of `YoY Delta`
+- `Trend Chip Text` — formatted label (e.g., `▲ +2.1` or `▼ −13%`)
+- `Norm Status` → `Color Hex` — color taken from the KPI’s current status
+- (optional) blank-handling to hide the badge if the previous year is missing
+
+---
+
+## Screenshots
+![Dashboard overview](assets/dashboard_cover.png)
+![Power BI Fields — 1](assets/powerbi_fields_1.png)
+![Power BI Fields — 2](assets/powerbi_fields_2.png)
+![Power BI Fields — 3](assets/powerbi_fields_3.png)
+
+---
+
+## Project structure
+```text
+.
+├─ assets/                 # screenshots used in README
+├─ data/                   # sample/anonymized Excel (e.g., furnikom_financial_analysis.xlsx)
+├─ dax/                    # DAX measures (one file per measure or grouped)
+├─ deneb/                  # Vega-Lite JSON specs (clean JSON, no comments)
+├─ docs/
+│  ├─ kpi_catalog.md       # definitions, formulas, target ranges, interpretation
+│  ├─ methodology.md       # data sources, transforms, YoY logic, color rules
+│  ├─ case_study.md        # business questions this report answers
+│  └─ data_dictionary.md   # field → meaning → type → units
+├─ themes/
+│  └─ powerbi_theme.json   # project theme (e.g., #F0F0F0 background, #115845 accents)
+├─ fin-health.pbix         # Power BI report (root)
+├─ LICENSE
+└─ README.md               # this file
+```
+
+---
+
+## Getting started
+
+### Prerequisites
+- Power BI Desktop (tested on 2.146.705.0 64 (August 2025), Windows).
+- Optional: Deneb custom visual (Marketplace → “Deneb”).
+
+### Open the report
+1. `git clone https://github.com/IrinaTok11/fin-health-pbi`
+2. Open **fin-health.pbix** from the repo root.
+3. If prompted, set the Excel path to `data/furnikom_financial_analysis.xlsx`.
+4. Apply the theme: **View → Themes → Browse → `themes/powerbi_theme.json`**.
+5. **Refresh** to recalculate all measures and visuals.
+
+---
+
+## Methodology (how it works)
+- **Norm bands.** Each KPI has a target range (`Norm Low`, `Norm High`). In-band = neutral; out-of-band = flagged.
+- **Directionality.** “Better is higher” vs “better is lower” handled explicitly; buckets: `above` / `at_norm` / `below`.
+- **YoY deltas.** Measures compute absolute change and formatted strings with ▲/▼ arrows; blanks handled defensively.
+- **DAX style.** Comma-separated arguments, consistent naming (`grp__KPI__SubKPI__MeasureName`).
+- **Deneb.** Clean Vega-Lite JSON (no `//` or `/* */`). Legends and rationale described in `docs/methodology.md`.
+
+See:
+- `docs/kpi_catalog.md` — formulas & interpretation  
+- `docs/methodology.md` — modeling & visual rules  
+- `docs/data_dictionary.md` — fields and types
+
+---
+
+## Data & privacy
+- Ships with **anonymized/sample** data (`data/`).
+- Replace sample files locally if needed; keep raw identifiers and sensitive fields **out of version control**.
+
+---
+
+## Roadmap
+- Sector benchmarks (peer table, quartiles).
+- DuPont decomposition of ROE.
+- Scenario & sensitivity (revenue growth, COGS, WACC).
+- Export: **reports/Executive_Summary.pdf** (1–2 pages for leadership).
+
+---
+
+## License
+This project is available under the **MIT License**. See [LICENSE](LICENSE).
+
+---
+
+## Contact
+**IRINA TOKMIANINA** — Financial/BI Analyst  
+LinkedIn: [linkedin.com/in/tokmianina](https://www.linkedin.com/in/tokmianina/) · Email: <irinatokmianina@gmail.com>
