@@ -96,20 +96,23 @@ The badge communicates both **direction** (YoY change) and **quality vs norm** (
 ## Project structure
 ```text
 .
-├─ assets/                 # screenshots used in README
-├─ data/                   # sample/anonymized Excel (e.g., integra_financial_analysis.xlsx)
-├─ dax/                    # DAX measures (one file per measure or grouped)
-├─ deneb/                  # Vega-Lite JSON specs (clean JSON, no comments)
-├─ docs/
-│  ├─ kpi_catalog.md       # definitions, formulas, target ranges, interpretation
-│  ├─ methodology.md       # data sources, transforms, YoY logic, color rules
-│  ├─ case_study.md        # business questions this report answers
-│  └─ data_dictionary.md   # field → meaning → type → units
-├─ themes/
-│  └─ powerbi_theme.json   # project theme (e.g., #F0F0F0 background, #115845 accents)
-├─ fin-health.pbix         # Power BI report (root)
+├─ assets/                # screenshots used in README
+├─ data/                  # sample/anonymized Excel (e.g., integra_financial_analysis.xlsx)
+├─ dax/                   # DAX measures (one file per measure or grouped)
+├─ deneb/                 # Vega-Lite specs for Deneb visuals (reproducible JSON)
+│  ├─ kpi_bars_numeric.vl.json
+│  ├─ kpi_bars_percent.vl.json
+│  ├─ legend_status.vl.json
+│  ├─ row_labels.vl.json
+│  ├─ trend_indexed.vl.json
+│  └─ trend_pnl.vl.json
+├─ docs/                  # GitHub Pages landing (Cayman theme)
+│  ├─ _config.yml
+│  ├─ cover.png
+│  └─ index.md
+├─ fin-health.pbix        # Power BI report (root)
 ├─ LICENSE
-└─ README.md               # this file
+└─ README.md              # this file
 ```
 
 ---
