@@ -131,9 +131,12 @@ The badge communicates both **direction** (YoY change) and **quality vs norm** (
 ├─ docs/                  # GitHub Pages landing (Cayman theme)
 │  ├─ _config.yml
 │  ├─ cover.png
-│  └─ index.md
+│  ├─ cover2.png
+│  ├─ index.md
+│  └─ methodology.md
 ├─ fin-health.pbix        # Power BI report (root)
 ├─ LICENSE
+├─ PROJECT_NOTES.md
 └─ README.md              # this file
 ~~~
 
