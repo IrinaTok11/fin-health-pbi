@@ -149,8 +149,7 @@ The badge communicates both **direction** (YoY change) and **quality vs norm** (
 1. `git clone https://github.com/IrinaTok11/fin-health-power-bi`
 2. Open **fin-health.pbix** from the repo root.
 3. If prompted, set the Excel path to `data/integra_financial_analysis.xlsx`.
-4. Apply the theme: **View → Themes → Browse → `themes/powerbi_theme.json`**.
-5. **Refresh** to recalculate all measures and visuals.
+4. **Refresh** to recalculate all measures and visuals.
 
 ---
 
