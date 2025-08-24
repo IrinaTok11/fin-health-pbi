@@ -11,9 +11,20 @@ Portfolio preview of the interactive dashboard and KPI catalogue.
 
 ---
 
-## Dashboard preview
-<p align="center">
-  <img src="{{ 'cover.png' | relative_url }}" alt="Financial health dashboard" width="90%">
+## Design variants (why two pages?)
+
+- **Page 1 — v1 (rounded cards):** live, presentation-style dashboard with rounded corners and soft background.
+- **Page 2 — v2 (flat cards, print-friendly):** same data and measures, but a flat visual style optimised for clean Word screenshots.
+- **Use cases:** v1 for on-screen portfolio viewing; v2 for pasting individual visuals into the Word section **3.2 Analysis of liquidity ratios**.
+
+**Page 1 — rounded cards (v1)**
+<p align="left">
+  <img src="{{ 'cover.png' | relative_url }}" alt="Dashboard v1 — rounded cards" width="90%">
+</p>
+
+**Page 2 — flat cards (v2, print-friendly)**  
+<p align="left">
+  <img src="{{ 'cover2.png' | relative_url }}" alt="Dashboard v2 — flat cards for Word" width="90%">
 </p>
 
 ---
