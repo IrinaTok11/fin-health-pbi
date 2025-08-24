@@ -6,7 +6,7 @@ title: Financial Health — Power BI
 
 Portfolio preview of the interactive dashboard and KPI catalogue.
 
-**Repository:** https://github.com/IrinaTok11/fin-health-power-bi  
+**Repository:** https://irinatok11.github.io/fin-health-power-bi/  
 **PBIX download:** https://github.com/IrinaTok11/fin-health-power-bi/raw/main/fin-health.pbix
 
 ---
