@@ -45,8 +45,7 @@ The report tracks **12 core KPIs** with YoY deltas, target norms, and risk flags
 ## Design variants (two pages)
 - **Page 1 — v1 (rounded cards):** live, presentation-style dashboard with rounded corners and soft background (web look).
 - **Page 2 — v2 (flat cards, print-friendly):** same data and measures, but a flat visual style optimised for clean Word screenshots.  
-  Border `#B8BEC3`, corner radius `0`, **no** shadow, **no** title separator, **no** card background, visual `top = 15`.
-
+  
 > v1 and v2 use the **same** numbers; v2 only changes styling to paste visuals cleanly into Word.
 
 ---
