@@ -39,7 +39,7 @@ The report tracks **12 core KPIs** with YoY deltas, target norms, and risk flags
 - **YoY deltas** (absolute/relative), directional arrows, formatted tooltips.
 - **Per-KPI trend badge** (top-right of each card): arrow + color by current norm status.
 - **Consistent visual language**: theme, typography, color scale for “above / at / below norm”.
-- **Reproducible setup**: versioned DAX, Deneb specs, and data dictionary.
+- **Reproducible setup**: versioned DAX, Deneb specs, and documentation.
 
 ---
 
@@ -56,7 +56,7 @@ The report tracks **12 core KPIs** with YoY deltas, target norms, and risk flags
   `financials_long` (fact: yearly values) · `ratios` (KPI aggregates & measures) · `years` (helper) · `palette` (theme) · `Sections` (UI helpers).
 - **Relationships:** star-style around `financials_long[Year]` (one-to-many with `years`).
 - **Measures location:** stored under table **ratios** and versioned in [`/dax`](./dax).
-- **Definitions & norms:** kept in [`/docs/kpi_catalog.md`](./docs/kpi_catalog.md) with detailed logic in [`/docs/methodology.md`](./docs/methodology.md).
+- **Definitions & norms:** summarized in [`docs/methodology.md`](./docs/methodology.md).
 
 ---
 
@@ -165,9 +165,7 @@ The badge communicates both **direction** (YoY change) and **quality vs norm** (
 - **Deneb.** Clean Vega-Lite JSON (no `//` or `/* */`). Legends and rationale described in `docs/methodology.md`.
 
 See:
-- `docs/kpi_catalog.md` — formulas & interpretation  
 - `docs/methodology.md` — modelling & visual rules  
-- `docs/data_dictionary.md` — fields and types
 
 ---
 
