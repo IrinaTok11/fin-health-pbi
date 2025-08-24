@@ -1,42 +1,35 @@
-/* =========================================================
-   Custom list styling for GitHub Pages (Cayman / default)
-   Goal: make bullet/number lists tighter and closer to the left edge
-   ========================================================= */
-
-/* 1) Reduce the horizontal indent of unordered/ordered lists */
+/* Hanging bullets: no left gutter for the text; marker sits in the margin */
 .main-content ul,
-.main-content ol,
-.markdown-body ul,
-.markdown-body ol {
-  margin-left: 0;        /* remove outer left margin added by the theme */
-  padding-left: 1.1rem;  /* minimal inner padding so bullets are almost flush left */
-  list-style-position: outside; /* keep bullets outside the text block */
+.markdown-body ul {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  list-style: disc;
+  list-style-position: outside;
 }
 
-/* 2) Tighten vertical spacing between list items */
+.main-content ul li,
+.markdown-body ul li {
+  padding-left: 0.9rem;   /* space reserved for the bullet */
+  text-indent: -0.9rem;   /* pull the first line left so text aligns flush */
+}
+
+/* Same treatment for ordered lists */
+.main-content ol,
+.markdown-body ol {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  list-style-position: outside;
+}
+
+.main-content ol li,
+.markdown-body ol li {
+  padding-left: 1.2rem;   /* little wider for numbers */
+  text-indent: -1.2rem;
+}
+
+/* Tighter vertical rhythm */
 .main-content li,
 .markdown-body li {
-  margin-top: 0.1rem;    /* less space above each item */
-  margin-bottom: 0.1rem; /* less space below each item */
+  margin: 0.05rem 0;
 }
 
-/* 3) Slightly indent nested lists for readability */
-.main-content ul ul,
-.main-content ol ol,
-.markdown-body ul ul,
-.markdown-body ol ol {
-  padding-left: 1rem;    /* a modest extra indent for second-level lists */
-}
-
-/* 4) Optional: reduce extra space around whole lists
-   (uncomment if you want even tighter blocks)
-*/
-/*
-.main-content ul,
-.main-content ol,
-.markdown-body ul,
-.markdown-body ol {
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
-}
-*/
