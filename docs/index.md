@@ -38,8 +38,3 @@ Portfolio preview of the interactive dashboard and KPI catalogue.
 - 12 KPIs across liquidity, stability, and profitability with norms and trends.
 - Clean card layout with bands and trend arrows.
 - Three-year comparison plus indexed micro-charts.
-
----
-
-## Project notes
-See [PROJECT_NOTES.md](../PROJECT_NOTES.md).
