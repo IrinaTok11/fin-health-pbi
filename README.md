@@ -165,7 +165,7 @@ The badge communicates both **direction** (YoY change) and **quality vs norm** (
 - **Deneb.** Clean Vega-Lite JSON (no `//` or `/* */`). Legends and rationale described in `docs/methodology.md`.
 
 See:
-- `docs/methodology.md` — modelling & visual rules  
+- **[docs/methodology.md](./docs/methodology.md)** — modelling & visual rules  
 
 ---
 
