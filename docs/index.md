@@ -2,6 +2,32 @@
 title: Financial Health — Power BI
 ---
 
+<style>
+  :root { --brand: #52837B; }
+
+  .page-header .project-name,
+  .page-header .project-tagline {
+    color: #fff !important;
+    text-shadow: none !important;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--brand) !important;
+    font-weight: 750 !important;    
+    text-shadow: none !important;
+  }
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: var(--brand) !important;
+    text-decoration: none;
+  }
+
+  .gallery{
+    display:flex; gap:16px; justify-content:flex-start;
+    align-items:flex-start; flex-wrap:wrap; margin:0; padding:0;
+  }
+  .gallery img{ width:48%; height:auto; margin:0; }
+</style>
+
 # Financial Health — Power BI
 
 Portfolio preview of the interactive dashboard and KPI catalogue.
