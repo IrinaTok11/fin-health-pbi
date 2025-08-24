@@ -108,17 +108,16 @@ The badge communicates both **direction** (YoY change) and **quality vs norm** (
 
 ## Screenshots
 **Page 1 — v1 (rounded cards)**  
-![Dashboard v1](assets/dashboard_cover.png)
+![Dashboard v1](docs/cover.png)
 
 **Page 2 — v2 (flat cards, print-friendly)**  
-![Dashboard v2](assets/dashboard_cover2.png)
+![Dashboard v2](docs/cover2.png)
 
 ---
 
 ## Project structure
 ~~~text
-.
-├─ assets/                # screenshots used in README
+fin-health-power-bi
 ├─ data/                  # sample/anonymized Excel (e.g., integra_financial_analysis.xlsx)
 ├─ dax/                   # DAX measures (one file per measure or grouped)
 ├─ deneb/                 # Vega-Lite specs for Deneb visuals (reproducible JSON)
