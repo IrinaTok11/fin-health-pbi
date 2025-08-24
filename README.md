@@ -5,8 +5,6 @@ The report tracks **12 core KPIs** with YoY deltas, target norms, and risk flags
 
 **Live page:** https://irinatok11.github.io/fin-health-power-bi/ · **Repo:** https://github.com/IrinaTok11/fin-health-power-bi
 
-<link rel="stylesheet" href="../assets/custom.css?v=1">
-
 ---
 
 ## Table of contents
