@@ -128,11 +128,11 @@ The badge communicates both **direction** (YoY change) and **quality vs norm** (
 │  ├─ row_labels.vl.json
 │  ├─ trend_indexed.vl.json
 │  └─ trend_pnl.vl.json
-├─ docs/                  # GitHub Pages landing (Cayman theme)
-│  ├─ _config.yml
+├─ docs/                  # GitHub Pages (live site content)
+│  ├─ _config.yml         # Cayman theme config
 │  ├─ cover.png
 │  ├─ cover2.png
-│  ├─ index.md
+│  ├─ index.md            # portfolio landing (IO page)
 │  └─ methodology.md
 ├─ fin-health.pbix        # Power BI report (root)
 ├─ LICENSE
