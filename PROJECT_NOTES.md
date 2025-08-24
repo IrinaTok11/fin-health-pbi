@@ -7,7 +7,7 @@ Internal notes for maintaining **Integra LLC — Financial Health Dashboard (Pow
 ## Quick links
 - Live page: https://IrinaTok11.github.io/fin-health-power-bi/
 - Repository: https://github.com/IrinaTok11/fin-health-power-bi
-- PBIX: [/fin-health.pbix](/fin-health.pbix) · [direct download](/fin-health.pbix?raw=1)
+- PBIX: [/fin-health.pbix](/fin-health.pbix) · [direct download](https://github.com/IrinaTok11/fin-health-power-bi/blob/main/fin-health.pbix?raw=1)
 - Docs: [/docs/index.md](/docs/index.md) · [/docs/methodology.md](/docs/methodology.md)
 - DAX: [/dax/](/dax/) · Deneb specs: [/deneb/](/deneb/)
 - Screenshots: [/assets/dashboard_cover.png](/assets/dashboard_cover.png) · [/assets/dashboard_cover2.png](/assets/dashboard_cover2.png)
