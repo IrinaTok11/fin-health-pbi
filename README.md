@@ -3,11 +3,14 @@
 A product-style, reproducible **financial health dashboard** for a mid-sized company (2021–2023).  
 The report tracks **12 core KPIs** with YoY deltas, target norms, and risk flags, plus structural and trend views (assets, liabilities, and P&L).
 
+**Live page:** https://irinatok11.github.io/fin-health-power-bi/ · **Repo:** https://github.com/IrinaTok11/fin-health-power-bi
+
 ---
 
 ## Table of contents
 - [Overview](#overview)
 - [Key features](#key-features)
+- [Design variants (two pages)](#design-variants-two-pages)
 - [KPIs tracked](#kpis-tracked)
 - [Per-KPI trend badge](#per-kpi-trend-badge)
 - [Screenshots](#screenshots)
@@ -15,6 +18,7 @@ The report tracks **12 core KPIs** with YoY deltas, target norms, and risk flags
 - [Getting started](#getting-started)
 - [Methodology (how it works)](#methodology-how-it-works)
 - [Data & privacy](#data--privacy)
+- [Cross-project usage](#cross-project-usage)
 - [Roadmap](#roadmap)
 - [License](#license)
 - [Contact](#contact)
@@ -23,8 +27,8 @@ The report tracks **12 core KPIs** with YoY deltas, target norms, and risk flags
 
 ## Overview
 **Goal:** provide a clear, decision-ready view of the company’s financial condition across **12 ratios** with YoY deltas, norms, and flags.  
-**Audience:** executives, finance leads, and analysts.
-**Tech stack:** Power BI Desktop · DAX (arguments with commas) · Deneb (Vega-Lite JSON) · Excel.
+**Audience:** executives, finance leads, and analysts.  
+**Tech stack:** Power BI Desktop · DAX (comma arguments) · Deneb (Vega-Lite JSON) · Excel.
 
 ---
 
@@ -35,6 +39,15 @@ The report tracks **12 core KPIs** with YoY deltas, target norms, and risk flags
 - **Per-KPI trend badge** (top-right of each card): arrow + color by current norm status.
 - **Consistent visual language**: theme, typography, color scale for “above/at/below norm”.
 - **Reproducible setup**: versioned DAX, Deneb specs, and data dictionary.
+
+---
+
+## Design variants (two pages)
+- **Page 1 — v1 (rounded cards):** live, presentation-style dashboard with rounded corners and soft background (web look).
+- **Page 2 — v2 (flat cards, print-friendly):** same data and measures, but a flat visual style optimised for clean Word screenshots.  
+  Border `#B8BEC3`, corner radius `0`, **no** shadow, **no** title separator, **no** card background, visual `top = 15`.
+
+> v1 and v2 use the **same** numbers; v2 only changes styling to paste visuals cleanly into Word.
 
 ---
 
@@ -49,7 +62,7 @@ The report tracks **12 core KPIs** with YoY deltas, target norms, and risk flags
 - Equity ratio (Autonomy)
 - Debt to equity
 - Working capital (absolute)
-- Altman Index (Z-Score)
+- Altman Index
 
 ### 3) Profitability & returns
 - Return on assets (ROA)
@@ -70,8 +83,7 @@ Every KPI card includes a small **trend badge** in the top-right corner.
 The badge communicates both **direction** (YoY change) and **quality vs norm** (color):
 
 - **Arrow:** ▲ positive YoY change, ▼ negative, ● no change.  
-- **Color:** the badge color follows the KPI’s **current norm status**  
-  (`below / at_norm / above` → palette `Color Hex`).  
+- **Color:** follows the KPI’s **current norm status** (`below / at_norm / above` → color hex).  
   So you see at a glance: *is it improving and is it within norm?*
 
 **Visual type:** native Power BI **Card** (not Deneb).
@@ -86,15 +98,20 @@ The badge communicates both **direction** (YoY change) and **quality vs norm** (
 ---
 
 ## Screenshots
-![Dashboard overview](assets/dashboard_cover.png)
-![Power BI Fields — 1](assets/powerbi_fields_1.png)
-![Power BI Fields — 2](assets/powerbi_fields_2.png)
+**Page 1 — v1 (rounded cards)**  
+![Dashboard v1](assets/dashboard_cover.png)
+
+**Page 2 — v2 (flat cards, print-friendly)**  
+![Dashboard v2](assets/dashboard_cover2.png)
+
+![Power BI Fields — 1](assets/powerbi_fields_1.png)  
+![Power BI Fields — 2](assets/powerbi_fields_2.png)  
 ![Power BI Fields — 3](assets/powerbi_fields_3.png)
 
 ---
 
 ## Project structure
-```text
+~~~text
 .
 ├─ assets/                # screenshots used in README
 ├─ data/                  # sample/anonymized Excel (e.g., integra_financial_analysis.xlsx)
@@ -113,7 +130,7 @@ The badge communicates both **direction** (YoY change) and **quality vs norm** (
 ├─ fin-health.pbix        # Power BI report (root)
 ├─ LICENSE
 └─ README.md              # this file
-```
+~~~
 
 ---
 
@@ -124,7 +141,7 @@ The badge communicates both **direction** (YoY change) and **quality vs norm** (
 - Optional: Deneb custom visual (Marketplace → “Deneb”).
 
 ### Open the report
-1. `git clone https://github.com/IrinaTok11/fin-health-pbi`
+1. `git clone https://github.com/IrinaTok11/fin-health-power-bi`
 2. Open **fin-health.pbix** from the repo root.
 3. If prompted, set the Excel path to `data/integra_financial_analysis.xlsx`.
 4. Apply the theme: **View → Themes → Browse → `themes/powerbi_theme.json`**.
@@ -141,7 +158,7 @@ The badge communicates both **direction** (YoY change) and **quality vs norm** (
 
 See:
 - `docs/kpi_catalog.md` — formulas & interpretation  
-- `docs/methodology.md` — modeling & visual rules  
+- `docs/methodology.md` — modelling & visual rules  
 - `docs/data_dictionary.md` — fields and types
 
 ---
@@ -149,6 +166,12 @@ See:
 ## Data & privacy
 - Ships with **anonymized/sample** data (`data/`).
 - Replace sample files locally if needed; keep raw identifiers and sensitive fields **out of version control**.
+
+---
+
+## Cross-project usage
+- **Page 2 — v2 (flat)** provides clean screenshots for the Word section **“3.2 Analysis of liquidity ratios”** generated by the companion **Python** project.  
+  Python portfolio: **live** https://irinatok11.github.io/fin-health-python/ · **repo** https://github.com/IrinaTok11/fin-health-python
 
 ---
 
