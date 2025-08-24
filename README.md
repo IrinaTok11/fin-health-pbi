@@ -136,7 +136,6 @@ The badge communicates both **direction** (YoY change) and **quality vs norm** (
 │  └─ methodology.md
 ├─ fin-health.pbix        # Power BI report (root)
 ├─ LICENSE
-├─ PROJECT_NOTES.md
 └─ README.md              # this file
 ~~~
 
