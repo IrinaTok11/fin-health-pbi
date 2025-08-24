@@ -1,7 +1,7 @@
 ---
 title: Financial Health — Power BI
 ---
-<link rel="stylesheet" href="../assets/custom.css?v=1">
+<link rel="stylesheet" href="../assets/custom.css?v=2">
 
 # Financial Health — Power BI
 
