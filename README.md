@@ -3,8 +3,6 @@
 A product-style, reproducible **financial health dashboard** for a mid-sized company (2021–2023).  
 The report tracks **12 core KPIs** with YoY deltas, target norms, and risk flags, plus structural and trend views (assets, liabilities, and P&L).
 
-**Live page:** https://irinatok11.github.io/fin-health-power-bi/ · **Repo:** https://github.com/IrinaTok11/fin-health-power-bi
-
 ---
 
 ## Table of contents
