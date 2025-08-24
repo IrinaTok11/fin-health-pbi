@@ -132,8 +132,8 @@ Both dashboard pages use the **same data and measures**; only the visual styling
 ### 6.4 Files & locations
 Gallery screenshots used on the live page:
 
-- [`dashboard_cover.png`](./assets/dashboard_cover.png) — v1 (rounded)  
-- [`dashboard_cover2.png`](./assets/dashboard_cover2.png) — v2 (flat)
+- [`cover.png`](./cover.png) — v1 (rounded)  
+- [`cover2.png`](./cover2.png) — v2 (flat)
 
 ---
 
