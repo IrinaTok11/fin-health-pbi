@@ -46,8 +46,7 @@ Portfolio preview of the interactive dashboard and KPI catalogue.
 
 
 > **Python portfolio:**  
-> **live page:** [irinatok11.github.io/fin-health-python](https://irinatok11.github.io/fin-health-python/)
-> **repository:** [github.com/IrinaTok11/fin-health-python](https://github.com/IrinaTok11/fin-health-python)
+> **live page:** [irinatok11.github.io/fin-health-python](https://irinatok11.github.io/fin-health-python/)  ·  **repository:** [github.com/IrinaTok11/fin-health-python](https://github.com/IrinaTok11/fin-health-python)
 
 
 **Page 1 — rounded cards (v1)**
