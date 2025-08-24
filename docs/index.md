@@ -1,19 +1,36 @@
 ---
-layout: default
+title: Financial Health — Power BI
 ---
 
-# Integra LLC — Financial Health Dashboard (Power BI)
+# Financial Health — Power BI
 
-A compact, executive-ready dashboard tracking **12 financial KPIs** (liquidity, stability, turnover, profitability) with YoY deltas, norms, and risk flags. Period: **2021–2023**.
+Portfolio preview of the interactive dashboard and KPI catalogue.
 
-[⬇️ Download .PBIX](https://github.com/IrinaTok11/fin-health-pbi/raw/main/fin-health.pbix)
+**Repository:** https://github.com/IrinaTok11/fin-health-power-bi  
+**PBIX download:** https://github.com/IrinaTok11/fin-health-power-bi/raw/main/fin-health.pbix
 
-![Dashboard overview](cover.png)
+---
 
-## How to open
-1. Download `fin-health.pbix`.
-2. Open in **Power BI Desktop (2024+)**.
-3. If needed, adjust data source paths (File → Options → Data Load).
+## Dashboard preview
+<p align="center">
+  <img src="assets/dashboard_cover.png" alt="Financial health dashboard" width="90%">
+</p>
 
-## Data & privacy
-Aggregated, anonymized figures; no confidential details are disclosed.
+---
+
+## Highlights
+- 12 KPIs across liquidity, stability, and profitability, with norms and trends.
+- Clean card layout with bands and trend arrows.
+- Three-year comparison plus indexed micro-charts.
+
+---
+
+## How to use
+1. Download and open the PBIX (link above).  
+2. Replace sample tables with your data using the same field names.  
+3. Refresh — all visuals update automatically.
+
+---
+
+## Project notes
+See [PROJECT_NOTES.md](PROJECT_NOTES.md) for status and next steps.
