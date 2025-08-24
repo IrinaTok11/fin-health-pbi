@@ -13,7 +13,7 @@ Portfolio preview of the interactive dashboard and KPI catalogue.
 
 ## Dashboard preview
 <p align="center">
-  <img src="{{ site.baseurl }}/assets/dashboard_cover.png" alt="Financial health dashboard" width="90%">
+  <img src="/fin-health-power-bi/assets/dashboard_cover.png" alt="Financial health dashboard" width="90%">
 </p>
 
 ---
