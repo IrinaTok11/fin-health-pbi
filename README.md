@@ -11,6 +11,7 @@ The report tracks **12 core KPIs** with YoY deltas, target norms, and risk flags
 - [Overview](#overview)
 - [Key features](#key-features)
 - [Design variants (two pages)](#design-variants-two-pages)
+- [Data model (at a glance)](#data-model-at-a-glance)
 - [KPIs tracked](#kpis-tracked)
 - [Per-KPI trend badge](#per-kpi-trend-badge)
 - [Screenshots](#screenshots)
@@ -18,7 +19,7 @@ The report tracks **12 core KPIs** with YoY deltas, target norms, and risk flags
 - [Getting started](#getting-started)
 - [Methodology (how it works)](#methodology-how-it-works)
 - [Data & privacy](#data--privacy)
-- [Cross-project usage](#cross-project-usage)
+- [Cross-workflow usage](#cross-workflow-usage)
 - [Roadmap](#roadmap)
 - [License](#license)
 - [Contact](#contact)
@@ -37,7 +38,7 @@ The report tracks **12 core KPIs** with YoY deltas, target norms, and risk flags
 - **Norm bands per KPI** (soft ranges with a neutral zone) used on **all 12 KPI cards**.
 - **YoY deltas** (absolute/relative), directional arrows, formatted tooltips.
 - **Per-KPI trend badge** (top-right of each card): arrow + color by current norm status.
-- **Consistent visual language**: theme, typography, color scale for “above/at/below norm”.
+- **Consistent visual language**: theme, typography, color scale for “above / at / below norm”.
 - **Reproducible setup**: versioned DAX, Deneb specs, and data dictionary.
 
 ---
@@ -47,6 +48,15 @@ The report tracks **12 core KPIs** with YoY deltas, target norms, and risk flags
 - **Page 2 — v2 (flat cards, print-friendly):** same data and measures, but a flat visual style optimised for clean Word screenshots.  
   
 > v1 and v2 use the **same** numbers; v2 only changes styling to paste visuals cleanly into Word.
+
+---
+
+## Data model (at a glance)
+- **Tables:**  
+  `financials_long` (fact: yearly values) · `ratios` (KPI aggregates & measures) · `years` (helper) · `palette` (theme) · `Sections` (UI helpers).
+- **Relationships:** star-style around `financials_long[Year]` (one-to-many with `years`).
+- **Measures location:** stored under table **ratios** and versioned in [`/dax`](./dax).
+- **Definitions & norms:** kept in [`/docs/kpi_catalog.md`](./docs/kpi_catalog.md) with detailed logic in [`/docs/methodology.md`](./docs/methodology.md).
 
 ---
 
@@ -85,13 +95,13 @@ The badge communicates both **direction** (YoY change) and **quality vs norm** (
 - **Color:** follows the KPI’s **current norm status** (`below / at_norm / above` → color hex).  
   So you see at a glance: *is it improving and is it within norm?*
 
-**Visual type:** native Power BI **Card** (not Deneb).
+**Visual type:** native Power BI **Card**.
 
-**Measures used (see `dax/measures.dax`):**
-- `YoY Delta` / `YoY Delta %` — latest year vs previous year (numeric or %)
-- `Trend Arrow` — ▲ / ▼ / ● based on the sign of `YoY Delta`
+**Measures used (see `dax/`):**
+- `YoY Δ` / `YoY Delta %` — latest year vs previous year (numeric or %)
+- `Trend Arrow` — ▲ / ▼ / ● based on the sign of `YoY Δ`
 - `Trend Chip Text` — formatted label (e.g., `▲ +2.1` or `▼ −13%`)
-- `Norm Status` → `Color Hex` — color taken from the KPI’s current status
+- `Norm Status` → `Color Hex` — color taken from the KPI’s current status  
 - (optional) blank-handling to hide the badge if the previous year is missing
 
 ---
@@ -102,10 +112,6 @@ The badge communicates both **direction** (YoY change) and **quality vs norm** (
 
 **Page 2 — v2 (flat cards, print-friendly)**  
 ![Dashboard v2](assets/dashboard_cover2.png)
-
-![Power BI Fields — 1](assets/powerbi_fields_1.png)  
-![Power BI Fields — 2](assets/powerbi_fields_2.png)  
-![Power BI Fields — 3](assets/powerbi_fields_3.png)
 
 ---
 
