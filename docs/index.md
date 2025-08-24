@@ -42,8 +42,10 @@ Portfolio preview of the interactive dashboard and KPI catalogue.
 | Variant | Intent | Where to use |
 |---|---|---|
 | **v1 — rounded cards** | Web/presentation look with soft background | On-screen portfolio |
-| **v2 — flat, print-friendly** | Same numbers; flat skin for clean Word crops | Word **3.2 Analysis of liquidity ratios** (Python: **live page:** [irinatok11.github.io/fin-health-python](https://irinatok11.github.io/fin-health-python/)  
-**repository:** [github.com/IrinaTok11/fin-health-python](https://github.com/IrinaTok11/fin-health-python) |
+| **v2 — flat, print-friendly** | Same numbers; flat skin for clean Word crops | Word **3.2 Analysis of liquidity ratios** |
+
+> See the companion Python portfolio: **live page:** [irinatok11.github.io/fin-health-python](https://irinatok11.github.io/fin-health-python/)
+> **repository:** [github.com/IrinaTok11/fin-health-python](https://github.com/IrinaTok11/fin-health-python)
 
 **Page 1 — rounded cards (v1)**
 <p align="left">
