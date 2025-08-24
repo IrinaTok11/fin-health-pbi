@@ -1,28 +1,16 @@
-/* ===========================================================
-   custom.css — GitHub Pages (Cayman/default) list tuning
-   Goal: hanging bullets with a small left gutter + tighter spacing
-   Scope: applies to content wrapped by .main-content / .markdown-body
-   =========================================================== */
-
-/* --------- knobs you can tweak --------- */
 :root {
-  /* distance from the extreme left edge to the bullet/number */
-  --bullet-gutter: 0.45rem;   /* try 0.35–0.60 */
 
-  /* width reserved for the bullet dot itself */
+   --bullet-gutter: 0.55rem;   
+
   --bullet-width: 1.05rem;
 
-  /* width reserved for ordered-list numbers (a bit wider than bullets) */
-  --num-width: 1.30rem;
+   --num-width: 1.30rem;
 
-  /* extra indent for nested (second-level) lists */
-  --nested-indent: 1.00rem;
+   --nested-indent: 1.00rem;
 }
 
-/* ========== Unordered lists (•) ========== */
 .main-content ul,
 .markdown-body ul {
-  /* pull the list block close to the left; bullet sits in the gutter */
   margin-left: var(--bullet-gutter) !important;
   padding-left: 0 !important;
   list-style: disc outside;
@@ -30,13 +18,10 @@
 
 .main-content ul li,
 .markdown-body ul li {
-  /* reserve space for the bullet and then pull the first line left
-     so the text column is perfectly flush with normal paragraphs */
   padding-left: var(--bullet-width);
   text-indent: calc(-1 * var(--bullet-width));
 }
 
-/* ========== Ordered lists (1. 2. 3.) ========== */
 .main-content ol,
 .markdown-body ol {
   margin-left: var(--bullet-gutter) !important;
@@ -50,36 +35,29 @@
   text-indent: calc(-1 * var(--num-width));
 }
 
-/* ========== Nested lists ========== */
 .main-content ul ul,
 .main-content ol ol,
 .markdown-body ul ul,
 .markdown-body ol ol {
-  /* push nested lists slightly to the right for readability */
-  margin-left: calc(var(--bullet-gutter) + var(--nested-indent)) !important;
+   margin-left: calc(var(--bullet-gutter) + var(--nested-indent)) !important;
   padding-left: 0 !important;
 }
 
-/* keep the same hanging alignment inside nested levels */
 .main-content ul ul li,
 .main-content ol ol li,
 .markdown-body ul ul li,
 .markdown-body ol ol li {
-  /* use the same widths as their parent types */
   padding-left: inherit;
   text-indent: inherit;
 }
 
-/* ========== Tighter vertical rhythm ========== */
 .main-content li,
 .markdown-body li {
-  margin: 0.06rem 0;   /* less space above/below each item */
+  margin: 0.06rem 0;   
 }
 
-/* ========== Small-screen adjustments (optional) ========== */
 @media (max-width: 600px) {
   :root {
-    /* give bullets a hair more room on narrow screens */
-    --bullet-gutter: 0.55rem;
+       --bullet-gutter: 0.55rem;
   }
 }
